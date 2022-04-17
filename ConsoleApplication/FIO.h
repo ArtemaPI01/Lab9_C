@@ -6,8 +6,11 @@ private:
 	std::string surname;
 	std::string patronymic;
 public:
-	void init(std::string name, std::string surname, std::string patronymic);
 	void enter();
 	void print();
+	FIO();
+	FIO(const FIO& obj);
+	FIO(std::string surname);
+	FIO(std::string name, std::string surname, std::string patronymic);
 };
 

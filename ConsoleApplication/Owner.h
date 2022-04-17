@@ -7,9 +7,12 @@ private:
 	int income;
 	int expenses;
 public:
-	void init(FIO fio, int income, int expenses);
+	Owner();
+	Owner(FIO f, int i, int e);
+	Owner(FIO f);
 	void enter();
 	void print();
 	int profitOwner();
+	Owner(const Owner& obj);
 };
 

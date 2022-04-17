@@ -5,15 +5,35 @@
 #include "Shop.h"
 #include <string>
 int Shop::counter = 0;
-void Shop::init(std::string name, std::string type, std::string street, std::string cloak) {
+
+Shop::Shop(std::string name, std::string type, std::string street, std::string cloak) :c(counter) {
 	this->name = name;
 	this->type = type;
 	this->street = street;
 	this->cloak = cloak;
+	c = ++counter;
 }
 
-
 Shop::Shop() :c(counter) {
+	c = ++counter;
+	name = "";
+	type = "";
+	street = "";
+	cloak = "";
+}
+
+Shop::Shop(std::string cloak) : c(counter) {
+	this->cloak = cloak;
+	c = ++counter;
+	name = "";
+	type = "";
+	street = "";
+}
+Shop::Shop(const Shop& obj) {
+	this->name = obj.name;
+	this->type = obj.type;
+	this->street = obj.street;
+	this->cloak = obj.cloak;
 	c = ++counter;
 }
 

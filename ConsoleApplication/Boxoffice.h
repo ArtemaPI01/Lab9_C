@@ -7,12 +7,15 @@ private:
 	int count;
 	FIO fio;
 public:
-	void init(int workers, int count, FIO fio);
 	void enter();
 	void print();
 	int& cloakBoxoffice(int x);
+	Boxoffice(const Boxoffice& obj);
 	Boxoffice& operator ++();
 	Boxoffice& operator ++(int x);
 	Boxoffice operator +(const Boxoffice& other);
+	Boxoffice();
+	Boxoffice(int workers);
+	Boxoffice(int workers, int count, FIO fio);
 };
 

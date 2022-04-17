@@ -1,11 +1,15 @@
 #pragma once
+#include <vector>
 class Warehouse
 {
 private:
-	std::string products;
+	std::vector<std::string> products;
 	int station;
 public:
-	void init(std::string products, int station);
+	Warehouse();
+	Warehouse(std::vector<std::string> products);
+	Warehouse(std::vector<std::string> products, int station);
+	Warehouse(const Warehouse& obj);
 	void enter();
 	void print();
 	int* cloakWarehouse(int x);

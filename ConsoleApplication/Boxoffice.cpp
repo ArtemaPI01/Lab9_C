@@ -5,13 +5,30 @@
 #include "Boxoffice.h"
 #include <string>
 
-void Boxoffice::init(int w, int c, FIO f) { //Метод создания 
+Boxoffice::Boxoffice(int workers) {
+	this->workers = workers;
+	fio = FIO();
+	count = 0;
+}
+
+Boxoffice::Boxoffice(int workers, int count, FIO f) {
 	this->workers = workers;
 	this->count = count;
 	this->fio = fio;
 }
 
+Boxoffice::Boxoffice() {
+	workers = 0;
+	count = 0;
+	fio = FIO();
+}
 
+Boxoffice::Boxoffice(const Boxoffice& obj)
+{
+	workers = obj.workers;
+	count = obj.count;
+	fio = obj.fio;
+}
 
 void Boxoffice::enter() {
 	std::cout << "\nВведите ФИО старшего кассира : ";

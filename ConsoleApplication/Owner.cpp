@@ -4,10 +4,29 @@
 #include <stdio.h>
 #include "Owner.h"
 
-void Owner::init(FIO f, int i, int e) {
+Owner::Owner(FIO f, int i, int e) {
 	this->fio = fio;
 	this->income = income;
 	this->expenses = expenses;
+}
+
+Owner::Owner(FIO f) {
+	this->fio = fio;
+	income = 0;
+	expenses = 0;
+}
+
+Owner::Owner() {
+	fio = FIO();
+	income = 0;
+	expenses = 0;
+}
+
+Owner::Owner(const Owner& obj)
+{
+	income = obj.income;
+	expenses = obj.expenses;
+	fio = obj.fio;
 }
 
 void Owner::enter() {
