@@ -12,6 +12,7 @@ public:
 	int& cloakBoxoffice(int x);
 	Boxoffice(const Boxoffice& obj);
 	Boxoffice& operator ++();
+	Boxoffice operator =(Boxoffice other);
 	Boxoffice& operator ++(int x);
 	Boxoffice operator +(const Boxoffice& other);
 	Boxoffice();

@@ -74,3 +74,10 @@ Boxoffice Boxoffice::operator+(const Boxoffice& other) {
 	temp.count = this->count + other.count;
 	return temp;
 }
+
+Boxoffice Boxoffice::operator =(Boxoffice other) {
+	workers = other.workers;
+	count = other.count;
+	fio = other.fio;
+	return *this;
+}

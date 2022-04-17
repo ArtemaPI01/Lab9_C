@@ -18,8 +18,6 @@ int main()
 {
 	setlocale(LC_ALL, "Rus");
 	SetConsoleCP(1251);
-
-
 	int N = 1;
 	Shop* Ashan = new Shop[N]();
 	for (int i = 0; i < N; i++)
@@ -55,5 +53,8 @@ int main()
 	box2.print();
 	Boxoffice box3 = box1 + box2;
 	box3.print();
+	Boxoffice box4 = Boxoffice();
+	box4 = box1;
+	box4.print();
 	_getch;
 }
